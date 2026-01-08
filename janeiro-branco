@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janeiro Branco | Pontual Petróleo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pontual-blue: #003366;    /* Azul Marinho Institucional */
+            --pontual-green: #28a745;   /* Verde Pontual (Energia/Saúde) */
+            --light-bg: #f4f7f9;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light-bg);
+            /* Fundo com leve gradiente que remete a fluidez/energia */
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background: var(--white);
+            width: 100%;
+            max-width: 480px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 51, 102, 0.15);
+            border-top: 10px solid var(--pontual-blue);
+        }
+
+        .header {
+            background: var(--white);
+            padding: 30px 30px 10px 30px;
+            text-align: center;
+        }
+
+        /* Detalhe que remete a uma gota/combustível estilizada ou foco */
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: var(--pontual-green);
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 15px;
+            color: white;
+            box-shadow: 0 8px 15px rgba(40, 167, 69, 0.3);
+        }
+
+        h1 {
+            color: var(--pontual-blue);
+            font-size: 22px;
+            font-weight: 800;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+
+        form {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--pontual-blue);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #edf2f7;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--pontual-green);
+            background-color: #f9fffb;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: none;
+        }
+
+        .btn-submit {
+            background: var(--pontual-blue);
+            color: white;
+            border: none;
+            padding: 16px;
+            width: 100%;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-submit:hover {
+            background: #002244;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 51, 102, 0.3);
+        }
+
+        .footer-note {
+            padding: 20px;
+            background: #f8fafc;
+            text-align: center;
+            font-size: 11px;
+            color: #94a3b8;
+            border-top: 1px solid #eee;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(40, 167, 69, 0.1);
+            color: var(--pontual-green);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="icon-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"></path></svg>
+        </div>
+        <div class="tag">JANEIRO BRANCO PONTUAL</div>
+        <h1>Canal de Escuta</h1>
+        <p class="subtitle">Sua voz é importante para manter nossa equipe forte e saudável. Relato 100% anônimo.</p>
+    </div>
+
+    <form action="https://formsubmit.co/seu-email@pontualpetroleo.com.br" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="[PONTUAL] Novo Depoimento Janeiro Branco">
+
+        <div class="form-group">
+            <label>Como está sua energia hoje?</label>
+            <select name="energia_colaborador" required>
+                <option value="" disabled selected>Selecione...</option>
+                <option value="Tanque Cheio">Tanque Cheio (Me sinto ótimo)</option>
+                <option value="Reserva">Na Reserva (Estou sobrecarregado)</option>
+                <option value="Manutenção">Preciso de uma Revisão (Quero ajuda)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Espaço para desabafo ou pedido de ajuda</label>
+            <textarea name="mensagem" placeholder="Fale abertamente. Este canal não rastreia sua identidade." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">
+            ENVIAR COM SIGILO
+        </button>
+    </form>
+
+    <div class="footer-note">
+        <strong>Pontual Petróleo</strong> - Cuidando de quem move a empresa.<br>
+        Sigilo garantido pela LGPD. Em emergências: CVV 188.
+    </div>
+</div>
+
+</body>
+</html>
